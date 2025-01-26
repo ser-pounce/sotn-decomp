@@ -1,14 +1,14 @@
 #include "common.h"
 #include <libetc.h>
 
-static long videoMode = 0;
+extern long D_8002D3A4;
 
 long SetVideoMode(long mode) {
     long prev;
 
-    prev = videoMode;
-    videoMode = mode;
+    prev = D_8002D3A4;
+    D_8002D3A4 = mode;
     return prev;
 }
 
-long GetVideoMode() { return videoMode; }
+long GetVideoMode(void) { return D_8002D3A4; }
