@@ -269,7 +269,7 @@ segments:
       - [0x1DB54, .data, psxsdk/libetc/intr_vb]
       - [0x1DB7C, .data, psxsdk/libetc/intr_dma]
       - [0x1DBA4, .data, psxsdk/libetc/vmode]
-      - [0x1DBA8, data]
+      - [0x1DBA8, .data, psxsdk/libc/sprintf]
       - [0x1DBB4, .data, psxsdk/libapi/counter]
       - [0x1DBCC, data]
       - [0x235E8, .data, psxsdk/libcd/c_002]
