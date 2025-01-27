@@ -11,9 +11,11 @@ typedef struct {
 
 // https://psx-spx.consoledev.net/timers/
 
-extern volatile s32* D_8002D3B4;     // _interrupt_status_register
-extern volatile Counter* D_8002D3B8; // _counters
-extern volatile s32 D_8002D3BC[4];   // _interrupt_status_masks
+static volatile s32* D_8002D3B4 =
+    (s32*)0x1F801070; // _interrupt_status_register
+static volatile Counter* D_8002D3B8 = (Counter*)0x1F801100; // _counters
+static volatile s32 D_8002D3BC[4] = {
+    0x10, 0x20, 0x40, 1}; // _interrupt_status_masks
 
 s32 SetRCnt(s32 spec, s16 target, s32 flags) {
     s32 i = spec & 0xFFFF;
